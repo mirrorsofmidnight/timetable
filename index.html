@@ -126,6 +126,18 @@
       text-align: center;
     }
 
+    .title {
+      margin: 0;
+      line-height: 0;
+    }
+
+    .title img {
+      display: block;
+      width: min(100%, 300px);
+      height: auto;
+      margin: 0 auto;
+    }
+    
     h1 {
       margin: 0;
       font-family: var(--title);
@@ -296,12 +308,10 @@
         height: 100px;
       }
 
-      h1 {
-        font-size: clamp(36px, 5vw, 48px);
-        -webkit-text-stroke: 4px #162e9c;
-        text-shadow: 0 5px 0 #1a3a8f;
+      .title img {
+        width: min(100%, 520px);
       }
-
+      
       .sub {
         max-width: 60ch;
         margin: 14px auto 18px;
@@ -349,13 +359,7 @@
       .logo img {
         height: 46px;
       }
-
-      h1 {
-        font-size: clamp(22px, 6.8vw, 28px);
-        -webkit-text-stroke: 2px #162e9c;
-        text-shadow: 0 3px 0 #1a3a8f;
-      }
-
+  
       .sub {
         margin: 6px auto 10px;
         font-size: 12.5px;
@@ -395,7 +399,9 @@
   </a>
 
   <main>
-    <h1>Unlock The Little Door</h1>
+    <h1 class="title">
+      <img src="assets/Unlock the Little Door.png" alt="Unlock The Little Door">
+    </h1>
     <p class="sub">The little door is locked. The tunnel behind it only opens for those who can solve the puzzle. Unlock it to reveal the Pink Palace floor plan, where every room holds the hint for your perusal before Moving Day.</p>
 
     <p class="timer">Time <b id="time">0:00</b></p>
@@ -408,7 +414,7 @@
   </main>
 
   <script>
-    const PHOTO_SRC = 'assets/Unlock The Little Door.png';
+    const PHOTO_SRC = 'assets/Timetable.png';
 
     const CORNER_BUTTONS = [
       'assets/Button_Pink.png',
